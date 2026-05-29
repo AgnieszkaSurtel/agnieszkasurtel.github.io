@@ -1,4 +1,3 @@
-
 var buttonColours = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
 var userClickedPattern = [];
@@ -60,17 +59,26 @@ function checkAnswer(currentLevel) {
       playSound("wrong");
       $("body").addClass("game-over");
       
-     
-      $("#level-title").text("Game Over, Press Any Key or Tap Screen to Restart");
-
+     if (window.matchMedia("(max-width: 768px)").matches) {
+        $("#level-title").text("Game Over, Tap Screen to Restart");
+      } else {
+        $("#level-title").text("Game Over, Press Any Key to Restart");
+      }
       setTimeout(function () {
         $("body").removeClass("game-over");
       }, 200);
-
-      startOver();
+      setTimeout(function () {
+        startOver();
+      }, 200); 
     }
 }
 
+
+    function startOver() {
+  level = 0;
+  gamePattern = [];
+  started = false; // Dopiero teraz gra pozwoli na kolejny start
+}
 function nextSequence() {
   userClickedPattern = [];
   level++;

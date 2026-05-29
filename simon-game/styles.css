@@ -1,21 +1,30 @@
 body {
   text-align: center;
-  background: radial-gradient(circle, #F8F1F1 0%, #FFECC0 100%);
+  background: linear-gradient(135deg, #1f1c2c 0%, #928dab 100%);
   margin: 0;
+  padding: 20px;
   min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
   color: #ffc800;
-  margin: 5%;
-  font-size: 3rem;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-shadow: 3px 3px 0px #000;;
 }
 
 .container {
-  display: block;
-  width: 100%;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 440px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -23,35 +32,44 @@ body {
   display: inline-block;
   height: 200px;
   width: 200px;
-  max-width: 35vw;
-  max-height: 35vw;
+  max-width: 38vw;
+  max-height: 38vw;
   border: 10px solid black;
   border-radius: 20%;
   cursor: pointer;
 }
-
-.game-over {
-  background-color: red;
-  opacity: 0.8;
+.btn:hover {
+  filter: brightness(1.2);
 }
 
-.red {
-  background-color: #CE2626;
+body.game-over {
+  background: #FF4136;
+  animation: flash 0.2s alternate 2;
 }
 
-.green {
-  background-color: #347433;
-}
-
-.blue {
-  background-color: #000957;
-}
-
-.yellow {
-  background-color: #FFDE42;
-}
+.green  { background-color: #00A86B; }
+.red    { background-color: #ED1C24; }
+.yellow { background-color: #FFDE17; }
+.blue   { background-color: #2980B9; }
 
 .pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
+  box-shadow: 0 0 40px #FFF;
+  background-color: #FFF;
+}
+/* Domyślnie (na telefonach i tabletach) */
+.desktop-text {
+  display: none;
+}
+.mobile-text {
+  display: inline;
+}
+
+/* Na dużych ekranach (komputery) */
+@media (min-width: 992px) {
+  .desktop-text {
+    display: inline;
+  }
+  .mobile-text {
+    display: none;
+  }
 }
