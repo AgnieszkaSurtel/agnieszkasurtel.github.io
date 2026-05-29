@@ -37,6 +37,7 @@ body {
   border: 10px solid black;
   border-radius: 20%;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .btn:hover {
   filter: brightness(1.2);
@@ -56,15 +57,12 @@ body.game-over {
   box-shadow: 0 0 40px #FFF;
   background-color: #FFF;
 }
-/* Domyślnie (na telefonach i tabletach) */
 .desktop-text {
   display: none;
 }
 .mobile-text {
   display: inline;
 }
-
-/* Na dużych ekranach (komputery) */
 @media (min-width: 992px) {
   .desktop-text {
     display: inline;
