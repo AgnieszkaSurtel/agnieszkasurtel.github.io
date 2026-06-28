@@ -21,7 +21,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Github</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">Github</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
@@ -44,6 +45,90 @@
             </div>
         </div>
     </header>
+    <section class="page-section bg-light" id="portfolio">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Portfolio</h2>
+                <h3 class="section-subheading text-muted">View my projects live</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 1-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="https://agnieszkasurtel.com/budget/" target="_blank">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/money.jpg" alt="key on wallet" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Budget App</div>
+                            <div class="portfolio-caption-subheading text-muted">Take Control of Your Finances</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 2-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" href="http://localhost:3000/simon-game/index.html" target="_blank">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/simon.jpg"
+                                alt="colored squares on a black background" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Simon Game</div>
+                            <div class="portfolio-caption-subheading text-muted">Let's Play!</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4">
+                    <!-- Portfolio item 3-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/manage.jpg" alt="Contact Management" />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Contact Management Console</div>
+                            <div class="portfolio-caption-subheading text-muted">Keep your business contacts organized
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="modal-body">
+                                            <h2 class="text-uppercase">Contact Management Console</h2>
+
+                                            <video class="img-fluid" controls>
+                                                <source src="assets/img/manage.mp4" type="video/mp4">
+                                                Your browser does not support video.
+                                            </video>
+                                            <button class="btn btn-primary btn-xl text-uppercase mt-4"
+                                                data-bs-dismiss="modal" type="button">
+                                                <i class="fas fa-xmark me-1"></i>
+                                                Close Project
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
     <section class="page-section" id="services">
         <div class="container">
             <div class="text-center">
@@ -101,11 +186,11 @@
         </div>
     </section>
 
-    <section class="page-section portfolio-section" id="portfolio">
+    <section class="page-section portfolio-section" id="github">
         <div class="container">
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">Github</h2>
-                <h3 class="section-subheading text-muted">Check out my latest projects</h3>
+                <h3 class="section-subheading text-muted">Check out my code</h3>
                 <a href="https://github.com/AgnieszkaSurtel" target="_blank" class="portfolio-link">
                     <svg class="github-icon-white" viewBox="0 0 24 24" width="80" height="80">
                         <path
